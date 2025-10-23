@@ -10,6 +10,8 @@ from .models import Base, Inventory
 app = FastAPI()
 MM_TOKEN = os.getenv("MM_TOKEN", "")
 
+# user잘못 커밋해서 다시 보냄...
+
 # DB 테이블 보장(이미 init.sql로 생성되지만, idempotent 보완용)
 Base.metadata.create_all(bind=engine)
 
