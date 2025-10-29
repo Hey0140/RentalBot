@@ -6,10 +6,12 @@ CREATE TABLE IF NOT EXISTS inventory (
   holder VARCHAR(200) NULL -- 현재 대여자(없으면 NULL)
 );
 
--- 우산 2개
+-- 우산 4개
 INSERT INTO inventory (category, name, holder) VALUES
 ('umbrella', '우산#1', NULL),
-('umbrella', '우산#2', NULL)
+('umbrella', '우산#2', NULL),
+('umbrella', '우산#3', NULL),
+('umbrella', '우산#4', NULL)
 ON CONFLICT DO NOTHING;
 
 -- C타입 충전기 3개
